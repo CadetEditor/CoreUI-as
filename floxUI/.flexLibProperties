@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="flox.ui.data.IPropertyInspectorDataDescriptor"/>
+    <classEntry path="flox.ui.data.DefaultPropertyInspectorDataDescriptor"/>
+    <classEntry path="flox.ui.components.IItemRenderer"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>
