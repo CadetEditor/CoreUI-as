@@ -53,7 +53,7 @@ package
 //	import flox.ui.cursors.*;
 	
 	[SWF( width="800", height="600", backgroundColor="0x101010", frameRate="60" )]
-	public class FloxSandbox extends Application
+	public class Main extends Application
 	{
 		public var list					:List;
 		public var tree					:Tree;
@@ -74,7 +74,7 @@ package
 		[Embed( source = "/assets/Info32x32.png" )]
 		private var Info32x32			:Class;
 		
-		public function FloxSandbox()
+		public function Main()
 		{
 			
 		}

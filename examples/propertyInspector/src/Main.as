@@ -42,12 +42,12 @@ package
 	import util.InspectableObject;
 	
 	[SWF( width="400", height="600", backgroundColor="0x101010", frameRate="60" )]
-	public class PropertyInspectorExample extends Application
+	public class Main extends Application
 	{
 		private var propertyInspector	:PropertyInspector;
 		
 		
-		public function PropertyInspectorExample()
+		public function Main()
 		{
 			
 		}

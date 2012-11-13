@@ -29,6 +29,7 @@
 package
 {
 	import flash.events.Event;
+	
 	import flox.ui.components.Application;
 	import flox.ui.components.Container;
 	import flox.ui.components.TextArea;
@@ -39,14 +40,14 @@ package
 	import flox.ui.util.FloxDeserializer;
 	
 	[SWF( width="800", height="600", backgroundColor="0x101010", frameRate="60" )]
-	public class FloxEditor extends Application
+	public class Main extends Application
 	{
 		private var textInput	:TextInput;
 		private var output		:Container;
 		private var errorOutput	:TextArea;
 		
 		
-		public function FloxEditor()
+		public function Main()
 		{
 			
 		}
@@ -91,6 +92,7 @@ package
 			</VBox>
 				
 			textInput.text = exampleXML.toXMLString();
+			textInput.dispatchEvent(new Event(Event.CHANGE));
 		}
 		
 		private function changeTextHandler( event:Event ):void
