@@ -29,12 +29,13 @@ package flox.ui.managers
 	import flash.display.Sprite;
 	import flash.display.Stage;
 	import flash.events.Event;
+	import flash.events.EventDispatcher;
 	import flash.utils.Dictionary;
 	
 	import flox.ui.components.Application;
 	import flox.ui.components.UIComponent;
 	
-	public class PopUpManager
+	public class PopUpManager extends EventDispatcher
 	{
 		private static var instance		:PopUpManager;
 		
@@ -42,6 +43,8 @@ package flox.ui.managers
 		private var modalCover	:Sprite;
 		
 		private var isModalTable	:Dictionary;
+		
+		public var modal			:Boolean;
 		
 		public function PopUpManager( app:Application )
 		{
@@ -88,6 +91,10 @@ package flox.ui.managers
 				popUp.y = Math.min( app.stage.stageHeight-popUp.height, popUp.y );
 				popUp.y = Math.max(0, popUp.y);
 			}
+			
+			this.modal = modal;
+			
+			dispatchEvent( new Event(Event.CHANGE) );
 		}
 		
 		public function removePopUp( popUp:DisplayObject ):void
@@ -108,10 +115,14 @@ package flox.ui.managers
 				}
 			}
 			
-			if ( !isModal && modalCover.stage )
+			if ( !stillModal && modalCover.stage )
 			{
 				app.popUpContainer.removeChild(modalCover);
 			}
+			
+			modal = stillModal;
+			
+			dispatchEvent( new Event(Event.CHANGE) );
 		}
 		
 		private function resizeStageHandler(event:Event):void
