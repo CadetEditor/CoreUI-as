@@ -70,7 +70,8 @@ package flox.ui.managers
 				{
 					modalCover.parent.removeChild(modalCover);
 				}
-				app.popUpContainer.addChildAt( modalCover, app.popUpContainer.getChildIndex(popUp) );
+				var index:int = app.popUpContainer.getChildIndex(popUp);
+				app.popUpContainer.addChildAt( modalCover, index );
 				updateModalCover();
 				if ( popUp is UIComponent && UIComponent(popUp).focusEnabled )
 				{
@@ -100,6 +101,7 @@ package flox.ui.managers
 		public function removePopUp( popUp:DisplayObject ):void
 		{
 			app.popUpContainer.removeChild(popUp);
+			
 			delete isModalTable[popUp];
 			
 			var stillModal:Boolean = false;
@@ -110,13 +112,14 @@ package flox.ui.managers
 				if ( isModal )
 				{
 					stillModal = true;
-					app.popUpContainer.addChildAt( modalCover, i );
+					if (!modalCover.stage) {
+						app.popUpContainer.addChildAt( modalCover, i );
+					}
 					break;
 				}
 			}
 			
-			if ( !stillModal && modalCover.stage )
-			{
+			if ( !stillModal && modalCover.stage ) {
 				app.popUpContainer.removeChild(modalCover);
 			}
 			
