@@ -147,6 +147,8 @@ package flox.ui.components
 			if ( list.parent == null ) return;
 			list.parent.removeChild(list);
 			list.selectedItems = [];
+			
+			invalidate();
 		}
 		
 		override public function onLoseComponentFocus():void
