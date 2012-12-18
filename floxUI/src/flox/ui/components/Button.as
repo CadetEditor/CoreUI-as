@@ -24,25 +24,20 @@
 
 package flox.ui.components
 {
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.DisplayObject;
 	import flash.display.MovieClip;
-	import flash.display.Sprite;
 	import flash.events.Event;
-	import flash.events.KeyboardEvent;
 	import flash.events.MouseEvent;
 	import flash.geom.Rectangle;
-	import flash.text.AntiAliasType;
 	import flash.text.TextField;
 	import flash.text.TextFieldAutoSize;
 	import flash.text.TextFormat;
 	import flash.text.TextFormatAlign;
-	import flash.text.TextLineMetrics;
-	import flash.ui.Keyboard;
+	
 	import flox.core.events.PropertyChangeEvent;
+	import flox.ui.FloxUI;
 	import flox.ui.events.SelectEvent;
-	import flox.ui.managers.FocusManager;
+	import flox.ui.util.Scale9GridUtil;
+	
 	import flux.skins.ButtonSkin;
 	
 	[Event( type = "flash.events.Event", name = "change" )]
@@ -81,6 +76,13 @@ package flox.ui.components
 			focusEnabled = true;
 			
 			skin = skinClass == null ? new ButtonSkin() : new skinClass();
+			
+			if (!skin.scale9Grid) {
+				//var s9g:Rectangle = FloxUI.getDefaultButtonSkinScale9Grid();
+				//skin.scale9Grid = new Rectangle();
+				Scale9GridUtil.setScale9Grid(skin, FloxUI.defaultButtonSkinScale9Grid);
+			}
+			
 			_width = skin.width;
 			_height = skin.height;
 			skin.mouseEnabled = false;

@@ -26,9 +26,13 @@ package flox.ui.components
 {
 	import flash.display.MovieClip;
 	import flash.display.Sprite;
-	import flux.skins.ProgressBarSkin;
+	
+	import flox.ui.FloxUI;
+	import flox.ui.util.Scale9GridUtil;
+	
 	import flux.skins.ProgressBarBorderSkin;
 	import flux.skins.ProgressBarIndeterminateSkin;
+	import flux.skins.ProgressBarSkin;
 	
 	public class ProgressBar extends UIComponent
 	{
@@ -57,12 +61,22 @@ package flox.ui.components
 		override protected function init():void
 		{
 			border = new ProgressBarBorderSkin();
+			
+			if (!border.scale9Grid) {
+				Scale9GridUtil.setScale9Grid(border, FloxUI.defaultProgressBarBorderSkinScale9Grid);
+			}
+			
 			addChild(border);
 			
 			_width = border.width;
 			_height = border.height;
 			
 			bar = new ProgressBarSkin();
+			
+			if (!bar.scale9Grid) {
+				Scale9GridUtil.setScale9Grid(bar, FloxUI.defaultProgressBarSkinScale9Grid);
+			}
+			
 			addChild(bar);
 			
 			indeterminateBar = new ProgressBarIndeterminateSkin();

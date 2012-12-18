@@ -4,11 +4,9 @@ package flox.ui.components
 	import flash.utils.clearInterval;
 	import flash.utils.setInterval;
 	
-	import flashx.textLayout.formats.TextAlign;
-	
+	import flox.core.layout.TextAlign;
 	import flox.ui.data.PropertyInspectorField;
 	import flox.ui.events.ItemEditorEvent;
-	import flox.ui.events.PropertyInspectorEvent;
 
 	[Event( type="flox.ui.events.ItemEditorEvent", name="commitValue" )]
 	public class PropertyInspectorItemRenderer extends UIComponent

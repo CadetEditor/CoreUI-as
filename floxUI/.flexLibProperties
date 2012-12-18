@@ -4,6 +4,9 @@
     <classEntry path="flox.ui.data.IPropertyInspectorDataDescriptor"/>
     <classEntry path="flox.ui.data.DefaultPropertyInspectorDataDescriptor"/>
     <classEntry path="flox.ui.components.IItemRenderer"/>
+    <classEntry path="flox.core.layout.TextAlign"/>
+    <classEntry path="flox.ui.FloxUI"/>
+    <classEntry path="flox.ui.util.Scale9GridUtil"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

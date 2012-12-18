@@ -27,6 +27,10 @@
 package flox.ui.components 
 {
 	import flash.display.Sprite;
+	
+	import flox.ui.FloxUI;
+	import flox.ui.util.Scale9GridUtil;
+	
 	import flux.skins.CanvasSkin;
 	
 	public class Canvas extends Container 
@@ -42,6 +46,11 @@ package flox.ui.components
 		override protected function init():void
 		{
 			background = new CanvasSkin();
+			
+			if (!background.scale9Grid) {
+				Scale9GridUtil.setScale9Grid(background, FloxUI.defaultCanvasSkinScale9Grid);
+			}
+			
 			addRawChild(background);
 			
 			super.init();

@@ -32,11 +32,14 @@ package flox.ui.components
 	import flash.text.TextFieldAutoSize;
 	import flash.text.TextFieldType;
 	import flash.text.TextFormat;
+	
+	import flox.ui.FloxUI;
 	import flox.ui.events.ItemEditorEvent;
+	import flox.ui.managers.FocusManager;
+	import flox.ui.util.Scale9GridUtil;
 	import flox.ui.util.SelectionColor;
 	
 	import flux.skins.TextAreaSkin;
-	import flox.ui.managers.FocusManager;
 	
 	public class TextArea extends UIComponent
 	{
@@ -60,6 +63,11 @@ package flox.ui.components
 		override protected function init():void
 		{
 			border = new TextAreaSkin();
+			
+			if (!border.scale9Grid) {
+				Scale9GridUtil.setScale9Grid(border, FloxUI.defaultTextAreaSkinScale9Grid);
+			}
+			
 			addChild(border);
 			
 			_width = border.width;

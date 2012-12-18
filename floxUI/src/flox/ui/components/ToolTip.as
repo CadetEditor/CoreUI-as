@@ -27,6 +27,10 @@ package flox.ui.components
 	import flash.display.Sprite;
 	import flash.text.TextField;
 	import flash.text.TextFieldAutoSize;
+	
+	import flox.ui.FloxUI;
+	import flox.ui.util.Scale9GridUtil;
+	
 	import flux.skins.ToolTipSkin;
 	
 	public class ToolTip extends UIComponent 
@@ -59,6 +63,11 @@ package flox.ui.components
 		override protected function init():void
 		{
 			skin = new ToolTipSkin();
+			
+			if (!skin.scale9Grid) {
+				Scale9GridUtil.setScale9Grid(skin, FloxUI.defaultToolTipSkinScale9Grid);
+			}
+			
 			skin.height = _height
 			addChild(skin);
 			

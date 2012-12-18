@@ -6,12 +6,15 @@ package flox.ui.components
 	import flash.utils.Dictionary;
 	
 	import flox.core.data.ArrayCollection;
+	import flox.core.events.ArrayCollectionEvent;
+	import flox.ui.FloxUI;
 	import flox.ui.data.DefaultPropertyInspectorDataDescriptor;
 	import flox.ui.data.IPropertyInspectorDataDescriptor;
 	import flox.ui.data.PropertyInspectorField;
-	import flox.core.events.ArrayCollectionEvent;
 	import flox.ui.events.ItemEditorEvent;
 	import flox.ui.events.PropertyInspectorEvent;
+	import flox.ui.util.Scale9GridUtil;
+	
 	import flux.skins.PropertyInspectorSkin;
 
 	[Event( type="flox.ui.events.PropertyInspectorEvent", name="commitValue" )]
@@ -105,6 +108,11 @@ package flox.ui.components
 		override protected function init():void
 		{
 			border = new PropertyInspectorSkin();
+			
+			if (!border.scale9Grid) {
+				Scale9GridUtil.setScale9Grid(border, FloxUI.defaultPropertyInspectorSkinScale9Grid);
+			}
+			
 			addChild(border);
 			
 			_dataDescriptor = new DefaultPropertyInspectorDataDescriptor();

@@ -26,15 +26,12 @@
 
 package flox.ui.components
 {
-	import flash.display.Shape;
 	import flash.display.Sprite;
 	import flash.events.Event;
-	import flash.events.FocusEvent;
 	import flash.events.MouseEvent;
 	
 	import flox.core.events.PropertyChangeEvent;
 	import flox.ui.managers.FocusManager;
-	import flux.skins.FocusRectSkin;
 	
 	[Event( type = "flash.events.Event", name = "resize" )]
 	[Event( type = "flox.ui.events.ComponentFocusEvent", name = "componentFocusIn" )]

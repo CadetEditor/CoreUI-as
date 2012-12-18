@@ -24,7 +24,6 @@
 
 package flox.ui.components 
 {
-	import flash.display.ColorCorrection;
 	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
@@ -32,9 +31,12 @@ package flox.ui.components
 	import flash.text.TextField;
 	import flash.text.TextFieldAutoSize;
 	
-	import flox.ui.events.ItemEditorEvent;
 	import flox.core.events.PropertyChangeEvent;
+	import flox.ui.FloxUI;
+	import flox.ui.events.ItemEditorEvent;
 	import flox.ui.managers.PopUpManager;
+	import flox.ui.util.Scale9GridUtil;
+	
 	import flux.skins.ColorPickerItemEditorSkin;
 
 	public class ColorPickerItemEditor extends UIComponent 
@@ -63,6 +65,10 @@ package flox.ui.components
 			height = 26;
 			
 			background = new ColorPickerItemEditorSkin();
+			
+			if (!background.scale9Grid) {
+				Scale9GridUtil.setScale9Grid(background, FloxUI.defaultColorPickerItemEditorSkinScale9Grid);
+			}
 			addChild(background);
 			
 			labelField = TextStyles.createTextField();

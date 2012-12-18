@@ -26,9 +26,12 @@ package flox.ui.components
 {
 	import flash.events.Event;
 	import flash.events.MouseEvent;
-	import flash.text.TextFieldAutoSize;
-	import flux.skins.TabNavigatorTabSkin;
+	
+	import flox.ui.FloxUI;
+	import flox.ui.util.Scale9GridUtil;
+	
 	import flux.skins.TabNavigatorTabCloseBtnSkin;
+	import flux.skins.TabNavigatorTabSkin;
 	
 	public class TabNavigatorTab extends Button
 	{
@@ -55,6 +58,10 @@ package flox.ui.components
 			closeBtn = new Button( TabNavigatorTabCloseBtnSkin );
 			closeBtn.addEventListener(MouseEvent.CLICK, clickCloseHandler);
 			addChild(closeBtn);
+			
+			if (!skin.scale9Grid) {
+				Scale9GridUtil.setScale9Grid(skin, FloxUI.defaultTabNavigatorTabSkinScale9Grid);
+			}
 		}
 		
 		override protected function validate():void

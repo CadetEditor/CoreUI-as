@@ -33,11 +33,14 @@ package flox.ui.components
 	import flash.text.TextFormat;
 	import flash.text.TextFormatAlign;
 	
-	import flox.ui.components.DropDownListItemRenderer;
 	import flox.core.data.ArrayCollection;
+	import flox.ui.FloxUI;
+	import flox.ui.components.DropDownListItemRenderer;
 	import flox.ui.events.ItemEditorEvent;
 	import flox.ui.events.ListEvent;
 	import flox.ui.events.SelectEvent;
+	import flox.ui.util.Scale9GridUtil;
+	
 	import flux.skins.DropDownMenuSkin;
 	
 	[Event( type="flash.events.Event", name="change" )]
@@ -70,9 +73,15 @@ package flox.ui.components
 			focusEnabled = true;
 			
 			skin = new DropDownMenuSkin();
+			
+			if (!skin.scale9Grid) {
+				Scale9GridUtil.setScale9Grid(skin, FloxUI.defaultDropDownMenuSkinScale9Grid);
+			}
+			
 			addChild(skin);
 			
-			buttonWidth = skin.width - skin.scale9Grid.right;
+			var right:Number = skin.scale9Grid ? skin.scale9Grid.right : 0;
+			buttonWidth = skin.width - right;
 			
 			_height = skin.height;
 			_width = skin.width;

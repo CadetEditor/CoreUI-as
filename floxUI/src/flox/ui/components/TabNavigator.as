@@ -29,14 +29,17 @@ package flox.ui.components
 	import flash.events.Event;
 	import flash.events.MouseEvent;
 	import flash.geom.Rectangle;
-	import flox.ui.managers.FocusManager;
 	
 	import flox.core.events.PropertyChangeEvent;
+	import flox.ui.FloxUI;
 	import flox.ui.events.TabNavigatorEvent;
 	import flox.ui.layouts.HorizontalLayout;
 	import flox.ui.layouts.LayoutAlign;
-	import flux.skins.TabNavigatorSkin;
+	import flox.ui.managers.FocusManager;
 	import flox.ui.util.BindingUtil;
+	import flox.ui.util.Scale9GridUtil;
+	
+	import flux.skins.TabNavigatorSkin;
 	
 	[Event( type="flox.ui.events.TabNavigatorEvent", name="closeTab" )]
 	public class TabNavigator extends ViewStack 
@@ -60,6 +63,11 @@ package flox.ui.components
 		override protected function init():void
 		{
 			background = new TabNavigatorSkin();
+			
+			if (!background.scale9Grid) {
+				Scale9GridUtil.setScale9Grid(background, FloxUI.defaultTabNavigatorSkinScale9Grid);
+			}
+			
 			addRawChild(background);
 			
 			super.init();

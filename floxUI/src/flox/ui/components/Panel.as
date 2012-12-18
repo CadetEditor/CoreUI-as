@@ -27,22 +27,22 @@
 package flox.ui.components
 {
 	import flash.display.MovieClip;
-	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.events.KeyboardEvent;
 	import flash.events.MouseEvent;
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
 	import flash.text.TextField;
-	import flash.text.TextFieldAutoSize;
-	import flash.text.TextFormat;
 	import flash.ui.Keyboard;
 	
+	import flox.ui.FloxUI;
 	import flox.ui.events.ComponentFocusEvent;
 	import flox.ui.events.SelectEvent;
 	import flox.ui.layouts.HorizontalLayout;
 	import flox.ui.layouts.LayoutAlign;
 	import flox.ui.managers.FocusManager;
+	import flox.ui.util.Scale9GridUtil;
+	
 	import flux.skins.PanelCloseBtnSkin;
 	import flux.skins.PanelSkin;
 	
@@ -73,7 +73,12 @@ package flox.ui.components
 		override protected function init():void
 		{
 			border = new PanelSkin();
-			_titleBarHeight = border.scale9Grid.top;
+			
+			if (!border.scale9Grid) {
+				Scale9GridUtil.setScale9Grid(border, FloxUI.defaultPanelSkinScale9Grid);
+			}
+			
+			_titleBarHeight = border.scale9Grid ? border.scale9Grid.top : 0;
 			_minHeight = _titleBarHeight;
 			addRawChild(border);
 			

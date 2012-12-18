@@ -27,16 +27,20 @@ package flox.ui.components
 	import flash.display.Sprite;
 	import flash.events.MouseEvent;
 	import flash.geom.Point;
+	
 	import flox.core.data.ArrayCollection;
+	import flox.core.events.ArrayCollectionEvent;
+	import flox.ui.FloxUI;
+	import flox.ui.components.IItemRenderer;
 	import flox.ui.data.DefaultDataDescriptor;
 	import flox.ui.data.IDataDescriptor;
-	import flox.core.events.ArrayCollectionEvent;
 	import flox.ui.events.SelectEvent;
 	import flox.ui.layouts.HorizontalLayout;
 	import flox.ui.managers.FocusManager;
+	import flox.ui.util.Scale9GridUtil;
+	
 	import flux.skins.MenuBarButtonSkin;
 	import flux.skins.MenuBarSkin;
-	import flox.ui.components.IItemRenderer;
 	
 	[Event( type="flox.ui.events.SelectEvent", name="select" )]
 	public class MenuBar extends UIComponent
@@ -107,6 +111,11 @@ package flox.ui.components
 				else
 				{
 					btn = new Button(MenuBarButtonSkin);
+					
+					if (!btn.scale9Grid) {
+						Scale9GridUtil.setScale9Grid(btn, FloxUI.defaultMenuBarButtonSkinScale9Grid);
+					}
+					
 					btn.focusEnabled = false;
 					btn.resizeToContentWidth = true;
 					buttonBar.addChild(btn);

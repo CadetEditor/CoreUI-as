@@ -24,8 +24,6 @@
 
 package flox.ui.components
 {
-	import adobe.utils.CustomActions;
-	
 	import flash.display.BlendMode;
 	import flash.display.GradientType;
 	import flash.display.Shape;
@@ -35,7 +33,9 @@ package flox.ui.components
 	import flash.geom.Matrix;
 	import flash.text.TextField;
 	import flash.text.TextFieldAutoSize;
-	import flash.text.TextFormat;
+	
+	import flox.ui.FloxUI;
+	import flox.ui.util.Scale9GridUtil;
 	
 	import flux.skins.ColorPickerBrightnessCursorSkin;
 	import flux.skins.ColorPickerColorCursorSkin;
@@ -89,16 +89,34 @@ package flox.ui.components
 			focusEnabled = true;
 			
 			border = new ColorPickerSkin();
+			
+			if (!border.scale9Grid) {
+				Scale9GridUtil.setScale9Grid(border, FloxUI.defaultColorPickerSkinScale9Grid);
+			}
+			
 			addChild(border);
 			_width = border.width;
 			_height = border.height;
 			
 			hueSaturationBorder = new ColorPickerSkin();
+			
+			if (!hueSaturationBorder.scale9Grid) {
+				Scale9GridUtil.setScale9Grid(hueSaturationBorder, FloxUI.defaultColorPickerSkinScale9Grid);
+			}
+			
 			addChild(hueSaturationBorder);
+			
 			hueSaturationGradient = new Shape();
 			addChild(hueSaturationGradient);
+			
 			brightnessBorder = new ColorPickerSkin();
+			
+			if (!brightnessBorder.scale9Grid) {
+				Scale9GridUtil.setScale9Grid(brightnessBorder, FloxUI.defaultColorPickerSkinScale9Grid);
+			}
+			
 			addChild(brightnessBorder);
+			
 			brightnessGradient = new Shape();
 			addChild(brightnessGradient);
 			
@@ -151,6 +169,11 @@ package flox.ui.components
 			addChild(hexLabel);
 			
 			swatchBorder = new ColorPickerSkin();
+			
+			if (!swatchBorder.scale9Grid) {
+				Scale9GridUtil.setScale9Grid(swatchBorder, FloxUI.defaultColorPickerSkinScale9Grid);
+			}
+			
 			swatchBorder.height = inputField.height;
 			addChild(swatchBorder);
 			

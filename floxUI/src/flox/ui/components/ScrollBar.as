@@ -30,10 +30,13 @@ package flox.ui.components
 	import flash.events.TimerEvent;
 	import flash.utils.Timer;
 	
-	import flux.skins.ScrollBarTrackSkin;
-	import flux.skins.ScrollBarThumbSkin;
-	import flux.skins.ScrollBarUpButtonSkin;
+	import flox.ui.FloxUI;
+	import flox.ui.util.Scale9GridUtil;
+	
 	import flux.skins.ScrollBarDownButtonSkin;
+	import flux.skins.ScrollBarThumbSkin;
+	import flux.skins.ScrollBarTrackSkin;
+	import flux.skins.ScrollBarUpButtonSkin;
 	
 	public class ScrollBar extends UIComponent
 	{
@@ -84,6 +87,11 @@ package flox.ui.components
 			track.addEventListener(MouseEvent.MOUSE_DOWN, mouseDownTrackHandler);
 			
 			thumb = new Button( ScrollBarThumbSkin );
+			
+			if (!thumb.scale9Grid) {
+				Scale9GridUtil.setScale9Grid(thumb, FloxUI.defaultScrollBarThumbSkinScale9Grid);
+			}
+			
 			thumb.addEventListener(MouseEvent.MOUSE_DOWN, mouseDownThumbHandler);
 			thumb.focusEnabled = false;
 			addChild( thumb );

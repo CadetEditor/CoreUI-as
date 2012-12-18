@@ -28,11 +28,15 @@ package flox.ui.components
 	import flash.events.Event;
 	import flash.events.MouseEvent;
 	import flash.geom.Point;
-	import flox.ui.events.ItemEditorEvent;
+	
 	import flox.core.events.PropertyChangeEvent;
-	import flux.skins.SliderTrackSkin;
-	import flux.skins.SliderThumbSkin;
+	import flox.ui.FloxUI;
+	import flox.ui.events.ItemEditorEvent;
+	import flox.ui.util.Scale9GridUtil;
+	
 	import flux.skins.SliderMarkerSkin;
+	import flux.skins.SliderThumbSkin;
+	import flux.skins.SliderTrackSkin;
 	
 	public class HSlider extends UIComponent
 	{
@@ -64,6 +68,11 @@ package flox.ui.components
 			focusEnabled = true;
 			
 			track = new SliderTrackSkin();
+			
+			if (!track.scale9Grid) {
+				Scale9GridUtil.setScale9Grid(track, FloxUI.defaultSliderTrackSkinScale9Grid);
+			}
+			
 			addChild(track);
 			
 			_width = track.width;

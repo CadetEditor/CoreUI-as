@@ -33,20 +33,23 @@ package flox.ui.components
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
 	import flash.utils.Dictionary;
-	import flox.ui.events.ListEvent;
 	
 	import flox.core.data.ArrayCollection;
-	import flox.ui.data.DefaultDataDescriptor;
-	import flox.ui.data.IDataDescriptor;
 	import flox.core.events.ArrayCollectionChangeKind;
 	import flox.core.events.ArrayCollectionEvent;
+	import flox.ui.FloxUI;
+	import flox.ui.components.IItemRenderer;
+	import flox.ui.data.DefaultDataDescriptor;
+	import flox.ui.data.IDataDescriptor;
 	import flox.ui.events.DragAndDropEvent;
+	import flox.ui.events.ListEvent;
 	import flox.ui.events.ScrollEvent;
 	import flox.ui.layouts.VerticalLayout;
 	import flox.ui.managers.FocusManager;
+	import flox.ui.util.Scale9GridUtil;
+	
 	import flux.skins.ListDropIndicatorSkin;
 	import flux.skins.ListSkin;
-	import flox.ui.components.IItemRenderer;
 	
 	[Event( type = "flash.events.Event", name = "change" )]
 	[Event( type = "flox.ui.events.ScrollEvent", name = "scrollChange" )]
@@ -125,6 +128,11 @@ package flox.ui.components
 			doubleClickEnabled = true;
 			
 			border = new ListSkin();
+			
+			if (!border.scale9Grid) {
+				Scale9GridUtil.setScale9Grid(border, FloxUI.defaultListSkinScale9Grid);
+			}
+			
 			addChild(border);
 			
 			content = new Sprite();
@@ -153,6 +161,11 @@ package flox.ui.components
 			addChild(vScrollBar);
 			
 			dropIndicator = new ListDropIndicatorSkin();
+			
+			if (!dropIndicator.scale9Grid) {
+				Scale9GridUtil.setScale9Grid(dropIndicator, FloxUI.defaultListDropIndicatorSkinScale9Grid);
+			}
+			
 			addChild(dropIndicator);
 			dropIndicator.visible = false;
 			
