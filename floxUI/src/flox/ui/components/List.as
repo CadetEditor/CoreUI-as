@@ -28,11 +28,12 @@ package flox.ui.components
 	import flash.display.InteractiveObject;
 	import flash.display.Sprite;
 	import flash.events.Event;
-	import flash.events.FocusEvent;
 	import flash.events.MouseEvent;
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
 	import flash.utils.Dictionary;
+	import flash.utils.getDefinitionByName;
+	import flash.utils.getQualifiedClassName;
 	
 	import flox.core.data.ArrayCollection;
 	import flox.core.events.ArrayCollectionChangeKind;
@@ -365,7 +366,11 @@ package flox.ui.components
 				// Clone the item renderer and attach it to the mouse.
 				dropIndicator.visible = true;
 				
-				draggedItemRenderer = new itemRendererClass();
+				//draggedItemRenderer = new itemRendererClass();
+				
+				var ClassReference:Class = getDefinitionByName(getClassName(itemRendererClass)) as Class;
+				draggedItemRenderer = new ClassReference();
+				
 				InteractiveObject(draggedItemRenderer).mouseEnabled = false;
 				IItemRenderer(draggedItemRenderer).list = this;
 				IItemRenderer(draggedItemRenderer).data = IItemRenderer(itemRenderer).data;;
@@ -383,6 +388,14 @@ package flox.ui.components
 				
 				return;
 			}
+		}
+		
+		private function getClassName( object:Object ):String
+		{
+			var classPath:String = flash.utils.getQualifiedClassName(object).replace("::",".");
+			if ( classPath.indexOf(".") == -1 ) return classPath;
+			var split:Array = classPath.split( "." );
+			return split[split.length-1];
 		}
 				
 		protected function updateDropTarget():void
