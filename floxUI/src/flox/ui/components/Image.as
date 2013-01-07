@@ -29,6 +29,7 @@ package flox.ui.components
 	import flash.display.DisplayObject;
 	import flash.events.Event;
 	import flash.geom.Rectangle;
+	import flash.utils.getDefinitionByName;
 	
 	public class Image extends UIComponent
 	{
@@ -93,8 +94,25 @@ package flox.ui.components
 				}
 				catch( e:Error )
 				{
-					return;
+					//return;
 				}
+				
+				// if the source has been passed in via the MXML flavoured XML.
+				if (!child && _source is String ) {
+					var imgClass:Class;
+					if ( _source.indexOf("::") ) {
+						var arr:Array = _source.split("::");
+						var icons:Class = getDefinitionByName(arr[0]) as Class;
+						imgClass = icons[arr[1]];
+					} else {
+						imgClass = getDefinitionByName(String(_source)) as Class;
+					}
+					if (imgClass) {
+						child = new imgClass();
+					}
+				}
+				
+				if (!child) return;
 			}
 			
 			addChild(child);
