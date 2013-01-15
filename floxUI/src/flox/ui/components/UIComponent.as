@@ -31,6 +31,7 @@ package flox.ui.components
 	import flash.events.MouseEvent;
 	
 	import flox.core.events.PropertyChangeEvent;
+	import flox.ui.events.ResizeEvent;
 	import flox.ui.managers.FocusManager;
 	
 	[Event( type = "flash.events.Event", name = "resize" )]
@@ -133,7 +134,7 @@ package flox.ui.components
 			if ( value == _width ) return;
 			_width = value;
 			invalidate();
-			dispatchEvent( new Event( Event.RESIZE, true ) );
+			dispatchEvent( new ResizeEvent( ResizeEvent.RESIZE, true ) );
 		}
 		
 		override public function get width():Number
@@ -147,7 +148,7 @@ package flox.ui.components
 			if ( value == _height ) return;
 			_height = value;
 			invalidate();
-			dispatchEvent( new Event( Event.RESIZE, true ) );
+			dispatchEvent( new ResizeEvent( ResizeEvent.RESIZE, true ) );
 		}
 		
 		override public function get height():Number
@@ -166,7 +167,7 @@ package flox.ui.components
 				_percentWidth = value < 0 ? 0 : value;
 			}
 			invalidate();
-			dispatchEvent( new Event( Event.RESIZE, true ) );
+			dispatchEvent( new ResizeEvent( ResizeEvent.RESIZE, true ) );
 		}
 		
 		public function get percentWidth():Number
@@ -185,7 +186,7 @@ package flox.ui.components
 				_percentHeight = value < 0 ? 0 : value;
 			}
 			invalidate();
-			dispatchEvent( new Event( Event.RESIZE, true ) );
+			dispatchEvent( new ResizeEvent( ResizeEvent.RESIZE, true ) );
 		}
 		
 		public function get percentHeight():Number
@@ -277,7 +278,7 @@ package flox.ui.components
 		{
 			if ( value == _excludeFromLayout ) return;
 			_excludeFromLayout = value;
-			dispatchEvent( new Event( Event.RESIZE, true ) );
+			dispatchEvent( new ResizeEvent( ResizeEvent.RESIZE, true ) );
 		}
 		
 		public function get excludeFromLayout():Boolean

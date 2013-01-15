@@ -31,10 +31,14 @@ package flox.ui.components
 	import flash.geom.Rectangle;
 	import flash.ui.Mouse;
 	import flash.ui.MouseCursor;
-	import flux.cursors.VerticalResizeCursor;
+	
+	import flox.ui.events.ResizeEvent;
 	import flox.ui.layouts.VerticalLayout;
 	import flox.ui.managers.CursorManager;
+	
+	import flux.cursors.VerticalResizeCursor;
 	import flux.skins.HDividerThumbSkin;
+
 	public class VDividedBox extends VBox
 	{
 		// Child elements
@@ -163,7 +167,7 @@ package flox.ui.components
 			}
 			invalidate();
 			validateNow();
-			dispatchEvent( new Event( Event.RESIZE, true ) );
+			dispatchEvent( new ResizeEvent( ResizeEvent.RESIZE, true ) );
 		}
 		
 		private function mouseUpStageHandler( event:MouseEvent ):void

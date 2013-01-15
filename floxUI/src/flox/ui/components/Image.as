@@ -31,6 +31,8 @@ package flox.ui.components
 	import flash.geom.Rectangle;
 	import flash.utils.getDefinitionByName;
 	
+	import flox.ui.events.ResizeEvent;
+	
 	public class Image extends UIComponent
 	{
 		// Scale modes
@@ -152,7 +154,7 @@ package flox.ui.components
 					break;
 			}
 			
-			dispatchEvent( new Event( Event.RESIZE ) );
+			dispatchEvent( new ResizeEvent( ResizeEvent.RESIZE ) );
 		}
 		
 		public function set source( value:Object ):void

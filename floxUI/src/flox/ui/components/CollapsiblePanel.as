@@ -28,6 +28,8 @@ package flox.ui.components
 {
 	import flash.events.Event;
 	import flash.events.MouseEvent;
+	
+	import flox.ui.events.ResizeEvent;
 
 	public class CollapsiblePanel extends Panel
 	{
@@ -76,7 +78,7 @@ package flox.ui.components
 			if ( value == _opened ) return;
 			_opened = value;
 			_height = _opened ? openedHeight : _titleBarHeight;
-			dispatchEvent( new Event( Event.RESIZE, true ) );
+			dispatchEvent( new ResizeEvent( ResizeEvent.RESIZE, true ) );
 			invalidate();
 		}
 		

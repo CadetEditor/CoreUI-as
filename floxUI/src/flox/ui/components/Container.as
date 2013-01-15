@@ -30,6 +30,7 @@ package flox.ui.components
 	import flash.geom.Rectangle;
 	
 	import flox.ui.events.ContainerEvent;
+	import flox.ui.events.ResizeEvent;
 	import flox.ui.layouts.AbsoluteLayout;
 	import flox.ui.layouts.ILayout;
 	
@@ -119,7 +120,7 @@ package flox.ui.components
 			content.scrollRect = new Rectangle();
 			addRawChild(content);
 			
-			content.addEventListener( Event.RESIZE, resizeHandler );
+			content.addEventListener( ResizeEvent.RESIZE, resizeHandler );
 		}
 		
 		override protected function validate():void
