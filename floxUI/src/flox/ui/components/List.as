@@ -45,8 +45,6 @@ package flox.ui.components
 	import flox.ui.events.DragAndDropEvent;
 	import flox.ui.events.ListEvent;
 	import flox.ui.events.ScrollEvent;
-	import flox.ui.layouts.VerticalLayout;
-	import flox.ui.managers.FocusManager;
 	import flox.ui.util.Scale9GridUtil;
 	
 	import flux.skins.ListDropIndicatorSkin;
@@ -368,7 +366,9 @@ package flox.ui.components
 				
 				//draggedItemRenderer = new itemRendererClass();
 				
-				var ClassReference:Class = getDefinitionByName(getClassName(itemRendererClass)) as Class;
+				//var className:String = getClassName(itemRendererClass);
+				var className:String = flash.utils.getQualifiedClassName(itemRendererClass).replace("::",".");
+				var ClassReference:Class = getDefinitionByName(className) as Class;
 				draggedItemRenderer = new ClassReference();
 				
 				InteractiveObject(draggedItemRenderer).mouseEnabled = false;
@@ -509,7 +509,7 @@ package flox.ui.components
 			if ( index < 0 || index >= flattenedData.length ) return;
 			
 			var item:Object = flattenedData[index];
-			if ( _dataDescriptor.getEnabled(item) == false ) return;
+			if ( item != null && _dataDescriptor.getEnabled(item) == false ) return;
 			
 			// The following logic implements the behaviour we expect to see from lists
 			// with various combinations of clicking and CTRL and/or SHIFT.

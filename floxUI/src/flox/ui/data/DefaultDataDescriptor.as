@@ -57,6 +57,8 @@ package flox.ui.data
 
 		public function getEnabled(data:Object):Boolean 
 		{
+			if (!data) return false;	//Accepting null values for deselecting in ComponentList
+			
 			if ( data.hasOwnProperty(enabledField) )
 			{
 				return data[enabledField];

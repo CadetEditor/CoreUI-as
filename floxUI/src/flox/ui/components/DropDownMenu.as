@@ -29,16 +29,12 @@ package flox.ui.components
 	import flash.events.MouseEvent;
 	import flash.geom.Point;
 	import flash.text.TextField;
-	import flash.text.TextFieldAutoSize;
-	import flash.text.TextFormat;
-	import flash.text.TextFormatAlign;
 	
 	import flox.core.data.ArrayCollection;
 	import flox.ui.FloxUI;
 	import flox.ui.components.DropDownListItemRenderer;
 	import flox.ui.events.ItemEditorEvent;
 	import flox.ui.events.ListEvent;
-	import flox.ui.events.SelectEvent;
 	import flox.ui.util.Scale9GridUtil;
 	
 	import flux.skins.DropDownMenuSkin;
@@ -135,7 +131,7 @@ package flox.ui.components
 		{
 			if ( selectedItem == null )
 			{
-				labelField.text = "";
+				labelField.text = "<No Selection>";
 			}
 			else
 			{

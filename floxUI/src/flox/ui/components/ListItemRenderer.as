@@ -26,7 +26,6 @@ package flox.ui.components
 {
 	import flash.events.Event;
 	import flash.events.IEventDispatcher;
-	import flash.text.TextFormat;
 	import flash.text.TextFormatAlign;
 	import flux.skins.ListItemRendererSkin;
 	import flox.ui.components.IItemRenderer;
@@ -87,7 +86,7 @@ package flox.ui.components
 			}
 			else
 			{
-				label = "";
+				label = "<No Selection>";
 				icon = null;
 				enabled = true;
 			}
