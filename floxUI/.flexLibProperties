@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
   <includeClasses>
-    <classEntry path="flox.ui.events.ResizeEvent"/>
+    <classEntry path="core.ui.events.ResizeEvent"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
