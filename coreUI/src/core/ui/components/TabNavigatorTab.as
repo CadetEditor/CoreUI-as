@@ -27,7 +27,7 @@ package core.ui.components
 	import flash.events.Event;
 	import flash.events.MouseEvent;
 	
-	import core.ui.FloxUI;
+	import core.ui.CoreUI;
 	import core.ui.util.Scale9GridUtil;
 	
 	import flux.skins.TabNavigatorTabCloseBtnSkin;
@@ -60,7 +60,7 @@ package core.ui.components
 			addChild(closeBtn);
 			
 			if (!skin.scale9Grid) {
-				Scale9GridUtil.setScale9Grid(skin, FloxUI.defaultTabNavigatorTabSkinScale9Grid);
+				Scale9GridUtil.setScale9Grid(skin, CoreUI.defaultTabNavigatorTabSkinScale9Grid);
 			}
 		}
 		

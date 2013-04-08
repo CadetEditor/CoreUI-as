@@ -31,7 +31,7 @@ package core.ui.components
 	import flash.geom.Rectangle;
 	
 	import core.events.PropertyChangeEvent;
-	import core.ui.FloxUI;
+	import core.ui.CoreUI;
 	import core.ui.events.TabNavigatorEvent;
 	import core.ui.layouts.HorizontalLayout;
 	import core.ui.layouts.LayoutAlign;
@@ -65,7 +65,7 @@ package core.ui.components
 			background = new TabNavigatorSkin();
 			
 			if (!background.scale9Grid) {
-				Scale9GridUtil.setScale9Grid(background, FloxUI.defaultTabNavigatorSkinScale9Grid);
+				Scale9GridUtil.setScale9Grid(background, CoreUI.defaultTabNavigatorSkinScale9Grid);
 			}
 			
 			addRawChild(background);

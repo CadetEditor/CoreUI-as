@@ -34,7 +34,7 @@ package core.ui.components
 	import flash.text.TextFormatAlign;
 	
 	import core.events.PropertyChangeEvent;
-	import core.ui.FloxUI;
+	import core.ui.CoreUI;
 	import core.ui.events.SelectEvent;
 	import core.ui.util.Scale9GridUtil;
 	
@@ -80,7 +80,7 @@ package core.ui.components
 			if (!skin.scale9Grid) {
 				//var s9g:Rectangle = FloxUI.getDefaultButtonSkinScale9Grid();
 				//skin.scale9Grid = new Rectangle();
-				Scale9GridUtil.setScale9Grid(skin, FloxUI.defaultButtonSkinScale9Grid);
+				Scale9GridUtil.setScale9Grid(skin, CoreUI.defaultButtonSkinScale9Grid);
 			}
 			
 			_width = skin.width;

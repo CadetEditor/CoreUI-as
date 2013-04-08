@@ -30,7 +30,7 @@ package core.ui.components
 	
 	import core.data.ArrayCollection;
 	import core.events.ArrayCollectionEvent;
-	import core.ui.FloxUI;
+	import core.ui.CoreUI;
 	import core.ui.components.IItemRenderer;
 	import core.ui.data.DefaultDataDescriptor;
 	import core.ui.data.IDataDescriptor;
@@ -113,7 +113,7 @@ package core.ui.components
 					btn = new Button(MenuBarButtonSkin);
 					
 					if (!btn.scale9Grid) {
-						Scale9GridUtil.setScale9Grid(btn, FloxUI.defaultMenuBarButtonSkinScale9Grid);
+						Scale9GridUtil.setScale9Grid(btn, CoreUI.defaultMenuBarButtonSkinScale9Grid);
 					}
 					
 					btn.focusEnabled = false;

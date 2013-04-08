@@ -34,7 +34,7 @@ package core.ui.components
 	import flash.text.TextField;
 	import flash.text.TextFieldAutoSize;
 	
-	import core.ui.FloxUI;
+	import core.ui.CoreUI;
 	import core.ui.util.Scale9GridUtil;
 	
 	import flux.skins.ColorPickerBrightnessCursorSkin;
@@ -91,7 +91,7 @@ package core.ui.components
 			border = new ColorPickerSkin();
 			
 			if (!border.scale9Grid) {
-				Scale9GridUtil.setScale9Grid(border, FloxUI.defaultColorPickerSkinScale9Grid);
+				Scale9GridUtil.setScale9Grid(border, CoreUI.defaultColorPickerSkinScale9Grid);
 			}
 			
 			addChild(border);
@@ -101,7 +101,7 @@ package core.ui.components
 			hueSaturationBorder = new ColorPickerSkin();
 			
 			if (!hueSaturationBorder.scale9Grid) {
-				Scale9GridUtil.setScale9Grid(hueSaturationBorder, FloxUI.defaultColorPickerSkinScale9Grid);
+				Scale9GridUtil.setScale9Grid(hueSaturationBorder, CoreUI.defaultColorPickerSkinScale9Grid);
 			}
 			
 			addChild(hueSaturationBorder);
@@ -112,7 +112,7 @@ package core.ui.components
 			brightnessBorder = new ColorPickerSkin();
 			
 			if (!brightnessBorder.scale9Grid) {
-				Scale9GridUtil.setScale9Grid(brightnessBorder, FloxUI.defaultColorPickerSkinScale9Grid);
+				Scale9GridUtil.setScale9Grid(brightnessBorder, CoreUI.defaultColorPickerSkinScale9Grid);
 			}
 			
 			addChild(brightnessBorder);
@@ -171,7 +171,7 @@ package core.ui.components
 			swatchBorder = new ColorPickerSkin();
 			
 			if (!swatchBorder.scale9Grid) {
-				Scale9GridUtil.setScale9Grid(swatchBorder, FloxUI.defaultColorPickerSkinScale9Grid);
+				Scale9GridUtil.setScale9Grid(swatchBorder, CoreUI.defaultColorPickerSkinScale9Grid);
 			}
 			
 			swatchBorder.height = inputField.height;

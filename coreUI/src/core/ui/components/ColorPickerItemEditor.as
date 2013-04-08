@@ -32,7 +32,7 @@ package core.ui.components
 	import flash.text.TextFieldAutoSize;
 	
 	import core.events.PropertyChangeEvent;
-	import core.ui.FloxUI;
+	import core.ui.CoreUI;
 	import core.ui.events.ItemEditorEvent;
 	import core.ui.managers.PopUpManager;
 	import core.ui.util.Scale9GridUtil;
@@ -67,7 +67,7 @@ package core.ui.components
 			background = new ColorPickerItemEditorSkin();
 			
 			if (!background.scale9Grid) {
-				Scale9GridUtil.setScale9Grid(background, FloxUI.defaultColorPickerItemEditorSkinScale9Grid);
+				Scale9GridUtil.setScale9Grid(background, CoreUI.defaultColorPickerItemEditorSkinScale9Grid);
 			}
 			addChild(background);
 			

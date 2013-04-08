@@ -35,7 +35,7 @@ package core.ui.components
 	import flash.text.TextField;
 	import flash.ui.Keyboard;
 	
-	import core.ui.FloxUI;
+	import core.ui.CoreUI;
 	import core.ui.events.ComponentFocusEvent;
 	import core.ui.events.SelectEvent;
 	import core.ui.layouts.HorizontalLayout;
@@ -75,7 +75,7 @@ package core.ui.components
 			border = new PanelSkin();
 			
 			if (!border.scale9Grid) {
-				Scale9GridUtil.setScale9Grid(border, FloxUI.defaultPanelSkinScale9Grid);
+				Scale9GridUtil.setScale9Grid(border, CoreUI.defaultPanelSkinScale9Grid);
 			}
 			
 			_titleBarHeight = border.scale9Grid ? border.scale9Grid.top : 0;

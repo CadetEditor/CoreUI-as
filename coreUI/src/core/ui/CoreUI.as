@@ -2,7 +2,7 @@ package core.ui
 {
 	import flash.geom.Rectangle;
 
-	public class FloxUI
+	public class CoreUI
 	{
 		public static function getDefaultButtonSkinScale9Grid():Rectangle
 		{

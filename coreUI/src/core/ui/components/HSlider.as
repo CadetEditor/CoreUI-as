@@ -30,7 +30,7 @@ package core.ui.components
 	import flash.geom.Point;
 	
 	import core.events.PropertyChangeEvent;
-	import core.ui.FloxUI;
+	import core.ui.CoreUI;
 	import core.ui.events.ItemEditorEvent;
 	import core.ui.util.Scale9GridUtil;
 	
@@ -70,7 +70,7 @@ package core.ui.components
 			track = new SliderTrackSkin();
 			
 			if (!track.scale9Grid) {
-				Scale9GridUtil.setScale9Grid(track, FloxUI.defaultSliderTrackSkinScale9Grid);
+				Scale9GridUtil.setScale9Grid(track, CoreUI.defaultSliderTrackSkinScale9Grid);
 			}
 			
 			addChild(track);

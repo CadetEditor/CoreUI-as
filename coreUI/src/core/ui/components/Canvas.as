@@ -28,7 +28,7 @@ package core.ui.components
 {
 	import flash.display.Sprite;
 	
-	import core.ui.FloxUI;
+	import core.ui.CoreUI;
 	import core.ui.util.Scale9GridUtil;
 	
 	import flux.skins.CanvasSkin;
@@ -48,7 +48,7 @@ package core.ui.components
 			background = new CanvasSkin();
 			
 			if (!background.scale9Grid) {
-				Scale9GridUtil.setScale9Grid(background, FloxUI.defaultCanvasSkinScale9Grid);
+				Scale9GridUtil.setScale9Grid(background, CoreUI.defaultCanvasSkinScale9Grid);
 			}
 			
 			addRawChild(background);

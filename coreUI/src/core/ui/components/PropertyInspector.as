@@ -7,7 +7,7 @@ package core.ui.components
 	
 	import core.data.ArrayCollection;
 	import core.events.ArrayCollectionEvent;
-	import core.ui.FloxUI;
+	import core.ui.CoreUI;
 	import core.ui.data.DefaultPropertyInspectorDataDescriptor;
 	import core.ui.data.IPropertyInspectorDataDescriptor;
 	import core.ui.data.PropertyInspectorField;
@@ -110,7 +110,7 @@ package core.ui.components
 			border = new PropertyInspectorSkin();
 			
 			if (!border.scale9Grid) {
-				Scale9GridUtil.setScale9Grid(border, FloxUI.defaultPropertyInspectorSkinScale9Grid);
+				Scale9GridUtil.setScale9Grid(border, CoreUI.defaultPropertyInspectorSkinScale9Grid);
 			}
 			
 			addChild(border);

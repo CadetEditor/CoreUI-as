@@ -30,7 +30,7 @@ package core.ui.components
 	import flash.events.TimerEvent;
 	import flash.utils.Timer;
 	
-	import core.ui.FloxUI;
+	import core.ui.CoreUI;
 	import core.ui.util.Scale9GridUtil;
 	
 	import flux.skins.ScrollBarDownButtonSkin;
@@ -89,7 +89,7 @@ package core.ui.components
 			thumb = new Button( ScrollBarThumbSkin );
 			
 			if (!thumb.scale9Grid) {
-				Scale9GridUtil.setScale9Grid(thumb, FloxUI.defaultScrollBarThumbSkinScale9Grid);
+				Scale9GridUtil.setScale9Grid(thumb, CoreUI.defaultScrollBarThumbSkinScale9Grid);
 			}
 			
 			thumb.addEventListener(MouseEvent.MOUSE_DOWN, mouseDownThumbHandler);

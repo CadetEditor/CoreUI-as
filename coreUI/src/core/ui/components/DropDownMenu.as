@@ -31,7 +31,7 @@ package core.ui.components
 	import flash.text.TextField;
 	
 	import core.data.ArrayCollection;
-	import core.ui.FloxUI;
+	import core.ui.CoreUI;
 	import core.ui.components.DropDownListItemRenderer;
 	import core.ui.events.ItemEditorEvent;
 	import core.ui.events.ListEvent;
@@ -71,7 +71,7 @@ package core.ui.components
 			skin = new DropDownMenuSkin();
 			
 			if (!skin.scale9Grid) {
-				Scale9GridUtil.setScale9Grid(skin, FloxUI.defaultDropDownMenuSkinScale9Grid);
+				Scale9GridUtil.setScale9Grid(skin, CoreUI.defaultDropDownMenuSkinScale9Grid);
 			}
 			
 			addChild(skin);

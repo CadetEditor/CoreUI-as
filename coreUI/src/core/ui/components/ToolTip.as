@@ -28,7 +28,7 @@ package core.ui.components
 	import flash.text.TextField;
 	import flash.text.TextFieldAutoSize;
 	
-	import core.ui.FloxUI;
+	import core.ui.CoreUI;
 	import core.ui.util.Scale9GridUtil;
 	
 	import flux.skins.ToolTipSkin;
@@ -65,7 +65,7 @@ package core.ui.components
 			skin = new ToolTipSkin();
 			
 			if (!skin.scale9Grid) {
-				Scale9GridUtil.setScale9Grid(skin, FloxUI.defaultToolTipSkinScale9Grid);
+				Scale9GridUtil.setScale9Grid(skin, CoreUI.defaultToolTipSkinScale9Grid);
 			}
 			
 			skin.height = _height

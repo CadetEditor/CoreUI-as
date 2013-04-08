@@ -38,7 +38,7 @@ package core.ui.components
 	import core.data.ArrayCollection;
 	import core.events.ArrayCollectionChangeKind;
 	import core.events.ArrayCollectionEvent;
-	import core.ui.FloxUI;
+	import core.ui.CoreUI;
 	import core.ui.components.IItemRenderer;
 	import core.ui.data.DefaultDataDescriptor;
 	import core.ui.data.IDataDescriptor;
@@ -129,7 +129,7 @@ package core.ui.components
 			border = new ListSkin();
 			
 			if (!border.scale9Grid) {
-				Scale9GridUtil.setScale9Grid(border, FloxUI.defaultListSkinScale9Grid);
+				Scale9GridUtil.setScale9Grid(border, CoreUI.defaultListSkinScale9Grid);
 			}
 			
 			addChild(border);
@@ -162,7 +162,7 @@ package core.ui.components
 			dropIndicator = new ListDropIndicatorSkin();
 			
 			if (!dropIndicator.scale9Grid) {
-				Scale9GridUtil.setScale9Grid(dropIndicator, FloxUI.defaultListDropIndicatorSkinScale9Grid);
+				Scale9GridUtil.setScale9Grid(dropIndicator, CoreUI.defaultListDropIndicatorSkinScale9Grid);
 			}
 			
 			addChild(dropIndicator);

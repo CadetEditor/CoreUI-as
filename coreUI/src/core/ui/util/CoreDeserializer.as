@@ -1,5 +1,5 @@
 /**
- * FloxDeserializer.as
+ * CoreDeserializer.as
  *
  * Copyright (c) 2011 Jonathan Pace
  *
@@ -29,7 +29,7 @@ package core.ui.util
 	import core.ui.components.*
 	import core.ui.layouts.*;
 	
-	public class FloxDeserializer
+	public class CoreDeserializer
 	{
 		public static function deserialize( xml:XML, topLevel:UIComponent = null, searchPackages:Array = null ):UIComponent
 		{

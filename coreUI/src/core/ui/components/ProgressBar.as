@@ -27,7 +27,7 @@ package core.ui.components
 	import flash.display.MovieClip;
 	import flash.display.Sprite;
 	
-	import core.ui.FloxUI;
+	import core.ui.CoreUI;
 	import core.ui.util.Scale9GridUtil;
 	
 	import flux.skins.ProgressBarBorderSkin;
@@ -63,7 +63,7 @@ package core.ui.components
 			border = new ProgressBarBorderSkin();
 			
 			if (!border.scale9Grid) {
-				Scale9GridUtil.setScale9Grid(border, FloxUI.defaultProgressBarBorderSkinScale9Grid);
+				Scale9GridUtil.setScale9Grid(border, CoreUI.defaultProgressBarBorderSkinScale9Grid);
 			}
 			
 			addChild(border);
@@ -74,7 +74,7 @@ package core.ui.components
 			bar = new ProgressBarSkin();
 			
 			if (!bar.scale9Grid) {
-				Scale9GridUtil.setScale9Grid(bar, FloxUI.defaultProgressBarSkinScale9Grid);
+				Scale9GridUtil.setScale9Grid(bar, CoreUI.defaultProgressBarSkinScale9Grid);
 			}
 			
 			addChild(bar);

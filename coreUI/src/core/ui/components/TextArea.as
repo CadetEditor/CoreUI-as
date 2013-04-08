@@ -33,7 +33,7 @@ package core.ui.components
 	import flash.text.TextFieldType;
 	import flash.text.TextFormat;
 	
-	import core.ui.FloxUI;
+	import core.ui.CoreUI;
 	import core.ui.events.ItemEditorEvent;
 	import core.ui.managers.FocusManager;
 	import core.ui.util.Scale9GridUtil;
@@ -65,7 +65,7 @@ package core.ui.components
 			border = new TextAreaSkin();
 			
 			if (!border.scale9Grid) {
-				Scale9GridUtil.setScale9Grid(border, FloxUI.defaultTextAreaSkinScale9Grid);
+				Scale9GridUtil.setScale9Grid(border, CoreUI.defaultTextAreaSkinScale9Grid);
 			}
 			
 			addChild(border);
