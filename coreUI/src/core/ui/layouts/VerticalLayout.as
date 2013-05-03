@@ -26,7 +26,6 @@ package core.ui.layouts
 {
 	import flash.display.DisplayObject;
 	import flash.display.DisplayObjectContainer;
-	import flash.display.InteractiveObject;
 	import flash.geom.Rectangle;
 	
 	import core.ui.components.UIComponent;

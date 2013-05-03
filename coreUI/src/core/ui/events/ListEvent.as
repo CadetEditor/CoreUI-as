@@ -28,9 +28,9 @@ package core.ui.events
 	
 	public class ListEvent extends Event
 	{
-		public static const ITEM_SELECT		:String = "itemSelect"
-		public static const ITEM_ROLL_OVER	:String = "itemRollOver"
-		public static const ITEM_ROLL_OUT	:String = "itemRollOut"
+		public static const ITEM_SELECT		:String = "itemSelect";
+		public static const ITEM_ROLL_OVER	:String = "itemRollOver";
+		public static const ITEM_ROLL_OUT	:String = "itemRollOut";
 		
 		private var _item		:Object;
 		

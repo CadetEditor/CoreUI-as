@@ -33,8 +33,9 @@ package core.ui.components
 	import core.ui.events.TreeEvent;
 	import core.ui.components.IItemRenderer;
 	
-	[Event( type="core.ui.events.TreeEvent", name="itemOpen" )]
-	[Event( type="core.ui.events.TreeEvent", name="itemClose" )]
+	[Event( type="core.ui.events.TreeEvent", name="itemOpen" )];
+	[Event( type="core.ui.events.TreeEvent", name="itemClose" )];
+	
 	public class Tree extends List 
 	{
 		// Properties

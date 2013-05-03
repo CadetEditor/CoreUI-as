@@ -68,7 +68,7 @@ package core.ui.components
 				Scale9GridUtil.setScale9Grid(skin, CoreUI.defaultToolTipSkinScale9Grid);
 			}
 			
-			skin.height = _height
+			skin.height = _height;
 			addChild(skin);
 			
 			textField = TextStyles.createTextField();

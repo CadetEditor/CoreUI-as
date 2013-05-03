@@ -33,7 +33,7 @@ package core.ui.events
 		public static const COMPONENT_FOCUS_IN	:String = "componentFocusIn";
 		public static const COMPONENT_FOCUS_OUT	:String = "componentFocusOut";
 		
-		private var _relatedComponent	:UIComponent
+		private var _relatedComponent	:UIComponent;
 		
 		public function ComponentFocusEvent( type:String, relatedComponent:UIComponent, bubbles:Boolean = false, cancelable:Boolean = false ) 
 		{

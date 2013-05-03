@@ -27,7 +27,6 @@ package core.ui.components
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
 	import flash.display.DisplayObject;
-	import flash.events.Event;
 	import flash.geom.Rectangle;
 	import flash.utils.getDefinitionByName;
 	
@@ -160,7 +159,7 @@ package core.ui.components
 		public function set source( value:Object ):void
 		{
 			if ( value == _source ) return;
-			_source = value
+			_source = value;
 			invalidate();
 		}
 		

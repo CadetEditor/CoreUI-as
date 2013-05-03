@@ -106,7 +106,7 @@ package core.ui.components
 		{
 			iconImage.validateNow();
 			
-			iconImage.width = iconImage.height = _height// - 6;
+			iconImage.width = iconImage.height = _height;// - 6;
 			iconImage.x = iconImage.y = 0;
 			/*
 			if ( labelField.text == "" )
@@ -178,7 +178,7 @@ package core.ui.components
 			
 			_selected ?
 			(_down ? skin.gotoAndPlay( "SelectedDown" ) 	: skin.gotoAndPlay("SelectedOver")) :
-			(_down ? skin.gotoAndPlay( "Down" ) 			: skin.gotoAndPlay("Over"))
+			(_down ? skin.gotoAndPlay( "Down" ) 			: skin.gotoAndPlay("Over"));
 				
 			addEventListener(MouseEvent.ROLL_OUT, rollOutHandler);
 			invalidate();
@@ -244,7 +244,7 @@ package core.ui.components
 			
 			_selected ?
 			(_over ? skin.gotoAndPlay( "SelectedOver" ) 	: skin.gotoAndPlay("SelectedUp")) :
-			(_over ? skin.gotoAndPlay( "Over" ) 			: skin.gotoAndPlay("Up"))
+			(_over ? skin.gotoAndPlay( "Over" ) 			: skin.gotoAndPlay("Up"));
 			invalidate();
 		}
 		

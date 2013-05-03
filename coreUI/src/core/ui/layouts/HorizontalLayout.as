@@ -26,7 +26,6 @@ package core.ui.layouts
 {
 	import flash.display.DisplayObject;
 	import flash.display.DisplayObjectContainer;
-	import flash.display.InteractiveObject;
 	import flash.geom.Rectangle;
 	import core.ui.components.UIComponent;
 	
@@ -154,7 +153,7 @@ package core.ui.layouts
 				{
 					case LayoutAlign.RIGHT :
 						shift = visibleWidth - contentSize.width;
-						break
+						break;
 					case LayoutAlign.CENTRE :
 						shift = (visibleWidth - contentSize.width) >> 1;
 						break;

@@ -28,8 +28,8 @@ package core.ui.data
 
 	public interface IDataDescriptor 
 	{
-		function getLabel( data:Object ):String
-		function getIcon( data:Object ):Object
+		function getLabel( data:Object ):String;
+		function getIcon( data:Object ):Object;
 		function getEnabled( data:Object ):Boolean;
 		function hasChildren( data:Object ):Boolean
 		function getChildren( data:Object ):ArrayCollection;

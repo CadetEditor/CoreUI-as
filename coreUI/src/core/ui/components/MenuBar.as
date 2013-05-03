@@ -36,13 +36,13 @@ package core.ui.components
 	import core.ui.data.IDataDescriptor;
 	import core.ui.events.SelectEvent;
 	import core.ui.layouts.HorizontalLayout;
-	import core.ui.managers.FocusManager;
 	import core.ui.util.Scale9GridUtil;
 	
 	import flux.skins.MenuBarButtonSkin;
 	import flux.skins.MenuBarSkin;
 	
-	[Event( type="core.ui.events.SelectEvent", name="select" )]
+	[Event( type="core.ui.events.SelectEvent", name="select" )];
+	
 	public class MenuBar extends UIComponent
 	{
 		// Properties
@@ -96,7 +96,7 @@ package core.ui.components
 		override protected function validate():void
 		{
 			var dataProviderLength:int = _dataProvider ? _dataProvider.length : 0;
-			var maxLength:int = Math.max( dataProviderLength, buttonBar.numChildren )
+			var maxLength:int = Math.max( dataProviderLength, buttonBar.numChildren );
 			
 			for ( var i:int = 0; i < dataProviderLength; i++ )
 			{

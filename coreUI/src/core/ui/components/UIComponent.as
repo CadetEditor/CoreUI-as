@@ -115,7 +115,7 @@ package core.ui.components
 		private function mouseDownHandler( event:MouseEvent ):void
 		{
 			if ( FocusManager.isFocusedItemAChildOf(this) ) return;
-			var target:UIComponent = event.target as UIComponent
+			var target:UIComponent = event.target as UIComponent;
 			if ( target && target != this && target.focusEnabled ) return;
 			FocusManager.setFocus(this);
 		}

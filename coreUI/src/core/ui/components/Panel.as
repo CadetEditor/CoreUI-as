@@ -46,7 +46,8 @@ package core.ui.components
 	import flux.skins.PanelCloseBtnSkin;
 	import flux.skins.PanelSkin;
 	
-	[Event( type="flash.events.Event", name="close" )]
+	[Event( type="flash.events.Event", name="close" )];
+	
 	public class Panel extends Container
 	{
 		// Properties
@@ -88,7 +89,7 @@ package core.ui.components
 			
 			_controlBar.layout = new HorizontalLayout( 4, LayoutAlign.RIGHT );
 			_controlBar.padding = 4;
-			addRawChild(_controlBar)
+			addRawChild(_controlBar);
 			
 			titleField = TextStyles.createTextField( true );
 			addRawChild(titleField);

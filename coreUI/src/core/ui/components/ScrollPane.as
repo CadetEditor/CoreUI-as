@@ -24,7 +24,6 @@
 
 package core.ui.components 
 {
-	import flash.display.DisplayObject;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
 	import flash.geom.Rectangle;
@@ -124,8 +123,8 @@ package core.ui.components
 			var scrollRect:Rectangle = content.scrollRect;
 			scrollRect.width = layoutArea.width;
 			scrollRect.height = layoutArea.height;
-			scrollRect.x = hScrollBar.value
-			scrollRect.y = vScrollBar.value
+			scrollRect.x = hScrollBar.value;
+			scrollRect.y = vScrollBar.value;
 			content.scrollRect = scrollRect;
 		}
 		

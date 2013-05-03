@@ -50,14 +50,14 @@ package core.ui.components
 	import flux.skins.ListDropIndicatorSkin;
 	import flux.skins.ListSkin;
 	
-	[Event( type = "flash.events.Event", name = "change" )]
-	[Event( type = "core.ui.events.ScrollEvent", name = "scrollChange" )]
-	[Event( type = "core.ui.events.DragAndDropEvent", name = "dragStart" )]
-	[Event( type = "core.ui.events.DragAndDropEvent", name = "dragOver" )]
-	[Event( type = "core.ui.events.DragAndDropEvent", name = "dragDrop" )]
-	[Event( type = "core.ui.events.ListEvent", name = "itemSelect" )]
-	[Event( type = "core.ui.events.ListEvent", name = "itemRollOver" )]
-	[Event( type = "core.ui.events.ListEvent", name = "itemRollOut" )]
+	[Event( type = "flash.events.Event", name = "change" )];
+	[Event( type = "core.ui.events.ScrollEvent", name = "scrollChange" )];
+	[Event( type = "core.ui.events.DragAndDropEvent", name = "dragStart" )];
+	[Event( type = "core.ui.events.DragAndDropEvent", name = "dragOver" )];
+	[Event( type = "core.ui.events.DragAndDropEvent", name = "dragDrop" )];
+	[Event( type = "core.ui.events.ListEvent", name = "itemSelect" )];
+	[Event( type = "core.ui.events.ListEvent", name = "itemRollOver" )];
+	[Event( type = "core.ui.events.ListEvent", name = "itemRollOut" )];
 	
 	public class List extends UIComponent
 	{

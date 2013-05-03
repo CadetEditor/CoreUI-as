@@ -95,7 +95,7 @@ package core.ui.components
 			
 			if ( _visibleIndex == value ) return;
 			var oldIndex:int = _visibleIndex;
-			_visibleIndex = value
+			_visibleIndex = value;
 			invalidate();
 			dispatchEvent( new IndexChangeEvent( IndexChangeEvent.INDEX_CHANGE, oldIndex, _visibleIndex, false, false ) );
 			dispatchEvent( new Event(Event.CHANGE) );

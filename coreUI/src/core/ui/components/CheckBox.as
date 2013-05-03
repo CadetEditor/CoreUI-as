@@ -31,7 +31,6 @@ package core.ui.components
 	import flash.text.TextFormatAlign;
 	
 	import core.ui.events.ItemEditorEvent;
-	import core.ui.managers.FocusManager;
 	import flux.skins.CheckBoxSkin;
 	
 	public class CheckBox extends Button 
