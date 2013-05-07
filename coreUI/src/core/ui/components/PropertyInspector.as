@@ -361,8 +361,8 @@ package core.ui.components
 
 internal class EditorDescriptor
 {
-	public var id					:String
-	public var type					:Class
+	public var id					:String;
+	public var type					:Class;
 	public var valueField			:String;
 	public var itemsField			:String;
 	public var itemsPropertyField	:String;

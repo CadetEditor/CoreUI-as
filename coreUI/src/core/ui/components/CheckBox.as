@@ -49,7 +49,7 @@ package core.ui.components
 		
 		override protected function init():void
 		{
-			super.init()
+			super.init();
 			
 			_toggle = true;
 			

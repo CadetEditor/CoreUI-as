@@ -154,7 +154,7 @@ package core.ui.layouts
 				{
 					case LayoutAlign.BOTTOM :
 						shift = visibleHeight - contentSize.height;
-						break
+						break;
 					case LayoutAlign.CENTRE :
 						shift = (visibleHeight - contentSize.width) >> 1;
 						break;

@@ -83,7 +83,7 @@ package core.ui.components
 		protected var dropIndicator				:Sprite;
 		
 		// Internal vars
-		protected var focusedItem				:Object
+		protected var focusedItem				:Object;
 		protected var flattenedData				:Array;
 		protected var visibleData				:Array;
 		protected var _itemRendererHeight		:int;
@@ -373,7 +373,7 @@ package core.ui.components
 				
 				InteractiveObject(draggedItemRenderer).mouseEnabled = false;
 				IItemRenderer(draggedItemRenderer).list = this;
-				IItemRenderer(draggedItemRenderer).data = IItemRenderer(itemRenderer).data;;
+				IItemRenderer(draggedItemRenderer).data = IItemRenderer(itemRenderer).data;
 				IItemRenderer(draggedItemRenderer).selected = IItemRenderer(itemRenderer).selected;
 				draggedItemRenderer.width = itemRenderer.width;
 				draggedItemRenderer.height = itemRenderer.height;

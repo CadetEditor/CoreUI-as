@@ -32,7 +32,7 @@ package core.ui.data
 		public var property			:String;	// The name of the property on the host
 		public var label			:String;	// Optional. The label to display (if null, will display property).
 		public var category			:String;	// Optional.
-		public var editorDescriptor	:Object
+		public var editorDescriptor	:Object;
 		public var editorParameters	:Object;
 		public var editorID			:String;
 		public var storedValues		:Array;

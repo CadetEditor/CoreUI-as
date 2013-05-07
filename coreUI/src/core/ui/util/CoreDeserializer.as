@@ -26,7 +26,7 @@ package core.ui.util
 {
 	import flash.utils.getDefinitionByName;
 	
-	import core.ui.components.*
+	import core.ui.components.*;
 	import core.ui.layouts.*;
 	
 	public class CoreDeserializer

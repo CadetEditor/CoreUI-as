@@ -83,7 +83,7 @@ package core.ui.components
 			_width = skin.width;
 			
 			labelField = TextStyles.createTextField();
-			labelField.text = "Label Label Label Label"
+			labelField.text = "Label Label Label Label";
 			addChild( labelField );
 			
 			skin.addEventListener( MouseEvent.ROLL_OVER, rollOverSkinHandler );

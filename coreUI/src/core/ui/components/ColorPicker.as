@@ -222,7 +222,7 @@ package core.ui.components
 			colorCursor.y = int(hueSaturationGradient.y + (1 - selectedSaturation) * hueSaturationGradient.height);
 			
 			brightnessCursor.x = brightnessGradient.x;
-			brightnessCursor.width = brightnessGradient.width
+			brightnessCursor.width = brightnessGradient.width;
 			brightnessCursor.y = brightnessGradient.y + (1-selectedBrightness) * brightnessGradient.height;
 			
 			inputField.x = _width - _padding - inputField.width;
