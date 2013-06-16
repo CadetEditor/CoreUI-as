@@ -1,5 +1,5 @@
 /**
- * FloxSandbox.as
+ * coreSandbox.as
  *
  * This isn't so much an 'example' as a place where I can stress test various
  * combinations of Flux components. As such it doesn't have a single topic it's
@@ -31,26 +31,27 @@
 
 package
 {
-	import flash.display.StageAlign;
-	import flash.display.StageScaleMode;
 	import flash.events.Event;
-	import flash.events.FocusEvent;
-	import flash.events.KeyboardEvent;
 	import flash.events.MouseEvent;
-	import flash.ui.Keyboard;
-	import flash.ui.Mouse;
-	import flash.ui.MouseCursor;
-	import flox.ui.components.*;
-	import flox.core.data.ArrayCollection;
-	import flox.ui.events.DragAndDropEvent;
-	import flox.ui.events.TabNavigatorEvent;
-	import flox.ui.events.TreeEvent;
-	import flox.ui.managers.CursorManager;
-	import flox.ui.managers.PopUpManager;
-	import flox.ui.managers.ToolTipManager;
-	import flox.ui.util.BindingUtil;
-	import flox.ui.util.FloxDeserializer;
-//	import flox.ui.cursors.*;
+	
+	import core.data.ArrayCollection;
+	import core.ui.components.Alert;
+	import core.ui.components.Application;
+	import core.ui.components.Button;
+	import core.ui.components.DropDownMenu;
+	import core.ui.components.List;
+	import core.ui.components.MenuBar;
+	import core.ui.components.Panel;
+	import core.ui.components.ProgressBar;
+	import core.ui.components.TabNavigator;
+	import core.ui.components.TextArea;
+	import core.ui.components.Tree;
+	import core.ui.events.DragAndDropEvent;
+	import core.ui.events.TabNavigatorEvent;
+	import core.ui.events.TreeEvent;
+	import core.ui.util.CoreDeserializer;
+
+//	import core.ui.cursors.*;
 	
 	[SWF( width="800", height="600", backgroundColor="0x101010", frameRate="60" )]
 	public class Main extends Application
@@ -166,7 +167,7 @@ package
 				
 			</Container>
 			
-			FloxDeserializer.deserialize( xml, this );
+			CoreDeserializer.deserialize( xml, this );
 			
 			spawnAlertBtn.addEventListener(MouseEvent.CLICK, clickSpawnAlertBtn);
 			

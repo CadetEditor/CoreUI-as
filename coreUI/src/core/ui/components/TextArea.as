@@ -82,7 +82,7 @@ package core.ui.components
 			
 			multiline = true;
 			
-			SelectionColor.setFieldSelectionColor(textField, 0xCCCCCC);
+			//SelectionColor.setFieldSelectionColor(textField, 0xFFFFFF);//0xCCCCCC);
 			
 			addChild(textField);
 		}

@@ -341,6 +341,7 @@ package core.ui.components
 			var layoutArea:Rectangle = getChildrenLayoutArea();
 			vScrollBar.max = contentHeight - layoutArea.height;
 			vScrollBar.thumbSizeRatio = layoutArea.height / contentHeight;
+			
 			var startIndex:int = Math.floor( vScrollBar.value / _itemRendererHeight );
 			var endIndex:int = startIndex + Math.ceil(  layoutArea.height / _itemRendererHeight ) + 1;
 			endIndex = endIndex > flattenedData.length ? flattenedData.length : endIndex;

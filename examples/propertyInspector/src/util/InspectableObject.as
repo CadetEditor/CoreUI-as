@@ -1,7 +1,9 @@
 package util
 {
 	import flash.events.EventDispatcher;
-	import flox.core.events.PropertyChangeEvent;
+	
+	import core.events.PropertyChangeEvent;
+	
 	public class InspectableObject extends EventDispatcher
 	{
 		

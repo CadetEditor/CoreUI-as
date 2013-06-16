@@ -29,16 +29,10 @@
 
 package
 {
-	import flash.events.Event;
-	import flox.ui.components.Application;
-	import flox.ui.components.Container;
-	import flox.ui.components.PropertyInspector;
-	import flox.ui.components.TextArea;
-	import flox.ui.components.TextInput;
-	import flox.ui.components.UIComponent;
-	import flox.ui.components.VBox;
-	import flox.core.data.ArrayCollection;
-	import flox.ui.layouts.HorizontalLayout;
+	import core.data.ArrayCollection;
+	import core.ui.components.Application;
+	import core.ui.components.PropertyInspector;
+	
 	import util.InspectableObject;
 	
 	[SWF( width="400", height="600", backgroundColor="0x101010", frameRate="60" )]
