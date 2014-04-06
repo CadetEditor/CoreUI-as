@@ -28,6 +28,6 @@ package core.ui.layouts
 	import flash.geom.Rectangle;
 	public interface ILayout 
 	{
-		function layout( content:DisplayObjectContainer, visibleWidth:Number, visibleHeight:Number, allowProportional:Boolean = true ):Rectangle
+		function layout( content:DisplayObjectContainer, visibleWidth:Number, visibleHeight:Number, allowProportional:Boolean = true ):Rectangle;
 	}
 }
